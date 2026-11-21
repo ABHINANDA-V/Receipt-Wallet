@@ -1,0 +1,73 @@
+/* Receipt Wallet - Navbar and Footer */
+
+/* Website logo */
+.navbar-brand
+{
+    font-size:1.35rem ;
+    letter-spacing: 0.3px;
+}
+
+/* Logo Icon */
+.brand-icon
+{
+    font-size:1.7rem
+}
+
+/* Navbar Links */
+.navbar .nav-link
+{
+    color : #183153;
+    margin: 0 8px;
+    transition:0.3s
+}
+/* Navbar Hover Effect */
+.navbar .nav-link:hover
+{
+    color:#0d6efd;
+}
+
+/* Navbar Buttons */
+.navbar .btn
+{
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Footer */
+footer
+{
+    font-size: 14px;
+}
+
+
+/* HOME PAGE - HERO SECTION */
+
+.home-hero
+{
+    background-color: linear-gradient(135deg,#f0f6ff,
+        #e5efff);
+    color: #102c60;
+    overflow: hidden;
+
+}
+
+/* Main Heading */
+.hero-title
+{
+    color: #102c60;
+    letter-spacing: -1.5px;
+}
+
+/* Sub Heading */
+.hero-subtitle
+{
+    color: #102c60;
+    line-height: 1.4;
+}
+
+/* Description */
+.hero-description
+{
+    color:#29477f;
+    line-height: 1.7;
+}
