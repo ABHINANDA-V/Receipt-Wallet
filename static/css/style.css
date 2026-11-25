@@ -1,29 +1,64 @@
-/* Receipt Wallet - Navbar and Footer */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Website Color Theme */
+:root
+{
+    --primary-color:rgb(7, 7, 83);
+    --secondary-color:rgb(179, 91, 19);
+    --tertiary-color:rgb(119, 119, 170);
+    --box-shadow: 0 4px 16px rgba(59, 51, 108, 0.5);
+    
+}
 
-/* Website logo */
+/* Navbar and Footer */
+.navbar
+{
+    box-shadow: 0 4px 16px rgba(49, 32, 103, 0.5);
+}
+
+/* Navbar logo */
 .navbar-brand
 {
     font-size:1.35rem ;
     letter-spacing: 0.3px;
 }
 
-/* Logo Icon */
-.brand-icon
+.wallet-icon
 {
-    font-size:1.7rem
+    color:var(--secondary-color);
+    font-size: 30px;
 }
+.receipt
+{
+    color: var(--primary-color);
+}
+.wallet
+{
+    color:var(--secondary-color)
+}
+
+
+
 
 /* Navbar Links */
 .navbar .nav-link
 {
-    color : #183153;
+    color : var(--primary-color);
     margin: 0 8px;
-    transition:0.3s
+    transition:0.3s;
+    font-weight: bold;
+    font-size:18px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-/* Navbar Hover Effect */
+
+/* Link Hover Effect */
 .navbar .nav-link:hover
 {
-    color:#0d6efd;
+    color:var(--secondary-color);
 }
 
 /* Navbar Buttons */
@@ -38,14 +73,22 @@ footer
 {
     font-size: 14px;
 }
+.footer-para
+{
+    color: var(--primary-color);
+}
+
+
+
 
 
 /* HOME PAGE - HERO SECTION */
 
 .home-hero
 {
-    background-color: linear-gradient(135deg,#f0f6ff,
+    background-color: linear-gradient(135deg,#7d8797,
         #e5efff);
+        
     color: #102c60;
     overflow: hidden;
 
@@ -54,20 +97,56 @@ footer
 /* Main Heading */
 .hero-title
 {
-    color: #102c60;
-    letter-spacing: -1.5px;
+    color: var(--primary-color);
+    /* letter-spacing: -1.5px; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Sub Heading */
 .hero-subtitle
 {
-    color: #102c60;
+    color:var(--secondary-color);
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.4;
 }
 
 /* Description */
 .hero-description
 {
-    color:#29477f;
+    color:var(--tertiary-color);
     line-height: 1.7;
+}
+
+
+/* Feature Card */
+.feature-icon
+{
+    font-size: 35px;
+    color:var(--secondary-color);
+}
+.feature-text
+{
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.feature-card
+{
+    border-radius: 10px;
+    box-shadow: 0 4px  10px rgba(57, 33, 93, 0.5);
+}
+
+
+/* =============================LOGIN AND REGISTRATION PAGE========================================== */
+.auth-picture
+{
+    width: 100%;
+}
+.auth-card
+{
+    margin-left: 30px;
+    width: 90%;
+    border:none;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
 }

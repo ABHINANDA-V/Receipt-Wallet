@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+<!-- ===============DASHBOARD NAVBAR======================== -->
+{% block navbar %}
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+    <div class="container">
+
+        <!-- Website logo and Name -->
+        <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="/">
+            <span class="wallet-icon"><i class="bi bi-wallet-fill"></i></span>
+            <span class="receipt">Receipt</span> <span class="wallet">Wallet</span>
+        </a>
+
+        <!-- Mobile Sidebar Button -->
+
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#dashboardSidebar" aria-controls="dashboardSidebar" aria-label="Open sidebar">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Desktop User Menu -->
+        <div>
+            <span class="text-secondary small">Welcome, User</span>
+            <a href="/" class="btn btn-outline-primary btn-sm">Logout</a>
+        </div>
+
+
+    </div>
+    </div>
+</nav>
+
+{% endblock %}
+
+<!-- ======================= Dashboard Layout====================== -->
+
+{% block content %}
+<div class="container-fluid dashboard-wrapper">
+    <div class="row">
+        <!-- ====================SIDEBAR======================== -->
+        <div class="col-lg-3 col-xl-2 p-0">
+
+            <div class="offcanvas-lg offcanvas-start dashboard-sidebar" tabindex="-1" id="dashboardSidebar"
+                aria-labelledby="dashboardSidebarLabel">
+                <!-- Mobile Sidebar Header -->
+                <div class="offcanvas-header d-lg-none">
+                    <h5 class="offcanvas-title" id="dashboardSidebarLabel">Receipt Wallet</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                        data-bs-target="#dashboardSidebar" aria-label="Close"></button>
+                </div>
+
+                <!-- Sidebar Content -->
+                <div class="offcanvas-body p-3 p-lg-3">
+                    <nav class="nav nav-pills flex-column gap-2">
+
+                        <!-- Overview -->
+                        <a href="{% url 'dashboard' %}" class="nav-link active">
+                            <i class="bi bi-grid me-2"></i>
+
+                            Overview
+                        </a>
+
+                        <!-- My Bills -->
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-receipt me-2"></i>
+                            My Bills</a>
+
+                        <!-- Upload Bill -->
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-cloud-upload me-2"></i>
+                            Upload Bill</a>
+
+                        <!-- Warranty Tracker -->
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-shield-check me-2"></i>
+
+                            Warranty Tracker</a>
+
+                        <!-- Settings -->
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-gear me-2"></i>
+                            Settings</a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!--======================= MAIN CONTENT===================== -->
+        <main class="col-lg-9 col-xl-10 px-3 px-lg-4 py-4">
+            {% block dashboard_content %}
+            {% endblock %}
+        </main>
+    </div>
+
+</div>
+{% endblock %}
