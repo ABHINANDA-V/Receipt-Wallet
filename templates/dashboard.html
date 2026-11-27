@@ -1,5 +1,634 @@
 {% extends 'base_dashboard.html' %}
+{% block title %}
+Dashboard - Receipt Wallet
+{% endblock %}
 
 {% block dashboard_content %}
-<h1>Dashboard</h1>
+<!-- ================= PAGE HEADING ================= -->
+
+<div class="d-flex flex-wrap justify-content-between
+            align-items-center gap-3 mb-4">
+
+
+    <div>
+
+        <h2 class="fw-bold dashboard-title mb-1">
+
+            Dashboard
+
+        </h2>
+
+        <p class="text-secondary mb-0">
+
+            Manage your receipts and warranties in one place.
+
+        </p>
+
+    </div>
+
+
+    <!-- Add Bill Button -->
+
+    <a href="#"
+       class="btn btn-primary">
+
+        <i class="bi bi-plus-lg me-2"></i>
+
+        Add New Bill
+
+    </a>
+
+
+</div>
+
+
+
+<!-- ================= STATISTICS CARDS ================= -->
+
+<div class="row row-cols-1 row-cols-sm-2
+            row-cols-xl-4 g-3 mb-4">
+
+
+    <!-- Total Bills -->
+
+    <div class="col">
+
+        <div class="card border-0 shadow-sm h-100">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between
+                            align-items-center mb-3">
+
+                    <span class="text-secondary">
+
+                        Total Bills
+
+                    </span>
+
+                    <div class="dashboard-icon">
+
+                        <i class="bi bi-receipt"></i>
+
+                    </div>
+
+                </div>
+
+
+                <h3 class="fw-bold dashboard-title mb-1">
+
+                    24
+
+                </h3>
+
+                <small class="text-secondary">
+
+                    Saved receipts
+
+                </small>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- This Month -->
+
+    <div class="col">
+
+        <div class="card border-0 shadow-sm h-100">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between
+                            align-items-center mb-3">
+
+                    <span class="text-secondary">
+
+                        This Month
+
+                    </span>
+
+                    <div class="dashboard-icon">
+
+                        <i class="bi bi-calendar-month"></i>
+
+                    </div>
+
+                </div>
+
+
+                <h3 class="fw-bold dashboard-title mb-1">
+
+                    ₹12,500
+
+                </h3>
+
+                <small class="text-secondary">
+
+                    Total purchases
+
+                </small>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Active Warranties -->
+
+    <div class="col">
+
+        <div class="card border-0 shadow-sm h-100">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between
+                            align-items-center mb-3">
+
+                    <span class="text-secondary">
+
+                        Active Warranties
+
+                    </span>
+
+                    <div class="dashboard-icon">
+
+                        <i class="bi bi-shield-check"></i>
+
+                    </div>
+
+                </div>
+
+
+                <h3 class="fw-bold dashboard-title mb-1">
+
+                    08
+
+                </h3>
+
+                <small class="text-secondary">
+
+                    Currently protected
+
+                </small>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Expiring Soon -->
+
+    <div class="col">
+
+        <div class="card border-0 shadow-sm h-100">
+
+            <div class="card-body">
+
+                <div class="d-flex justify-content-between
+                            align-items-center mb-3">
+
+                    <span class="text-secondary">
+
+                        Expiring Soon
+
+                    </span>
+
+                    <div class="dashboard-icon">
+
+                        <i class="bi bi-clock-history"></i>
+
+                    </div>
+
+                </div>
+
+
+                <h3 class="fw-bold dashboard-title mb-1">
+
+                    02
+
+                </h3>
+
+                <small class="text-secondary">
+
+                    Within 30 days
+
+                </small>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= RECENT BILLS ================= -->
+
+<div class="card border-0 shadow-sm mb-4">
+
+
+    <!-- Card Header -->
+
+    <div class="card-header bg-white border-0
+                d-flex justify-content-between
+                align-items-center py-3">
+
+        <h5 class="fw-bold dashboard-title mb-0">
+
+            Recent Bills
+
+        </h5>
+
+
+        <a href="#"
+           class="text-primary text-decoration-none small">
+
+            View All
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- Table -->
+
+    <div class="card-body p-0">
+
+
+        <div class="table-responsive">
+
+
+            <table class="table table-hover
+                          align-middle mb-0">
+
+
+                <thead class="table-light">
+
+                    <tr>
+
+                        <th class="ps-3">Product</th>
+
+                        <th>Purchase Date</th>
+
+                        <th>Amount</th>
+
+                        <th>Warranty</th>
+
+                    </tr>
+
+                </thead>
+
+
+
+                <tbody>
+
+
+                    <!-- Bill 1 -->
+
+                    <tr>
+
+                        <td class="ps-3">
+
+                            <div class="fw-semibold">
+
+                                Samsung Refrigerator
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Electronics
+
+                            </small>
+
+                        </td>
+
+
+                        <td>
+
+                            12 Nov 2026
+
+                        </td>
+
+
+                        <td>
+
+                            ₹25,000
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="badge text-bg-success">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+
+                    </tr>
+
+
+
+                    <!-- Bill 2 -->
+
+                    <tr>
+
+                        <td class="ps-3">
+
+                            <div class="fw-semibold">
+
+                                LG Washing Machine
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Home Appliances
+
+                            </small>
+
+                        </td>
+
+
+                        <td>
+
+                            05 Oct 2026
+
+                        </td>
+
+
+                        <td>
+
+                            ₹18,500
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="badge text-bg-success">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+
+                    </tr>
+
+
+
+                    <!-- Bill 3 -->
+
+                    <tr>
+
+                        <td class="ps-3">
+
+                            <div class="fw-semibold">
+
+                                HP Laptop
+
+                            </div>
+
+                            <small class="text-secondary">
+
+                                Electronics
+
+                            </small>
+
+                        </td>
+
+
+                        <td>
+
+                            20 Sep 2026
+
+                        </td>
+
+
+                        <td>
+
+                            ₹45,000
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="badge text-bg-warning">
+
+                                Expiring Soon
+
+                            </span>
+
+                        </td>
+
+
+                    </tr>
+
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= WARRANTY SUMMARY ================= -->
+
+<div class="row g-3">
+
+
+    <!-- Warranty Summary -->
+
+    <div class="col-lg-6">
+
+
+        <div class="card border-0 shadow-sm h-100">
+
+
+            <div class="card-body">
+
+
+                <h5 class="fw-bold dashboard-title mb-3">
+
+                    Warranty Summary
+
+                </h5>
+
+
+
+                <div class="d-flex justify-content-between
+                            align-items-center mb-3">
+
+                    <div>
+
+                        <div class="fw-semibold">
+
+                            HP Laptop
+
+                        </div>
+
+                        <small class="text-secondary">
+
+                            Warranty ends on 20 Dec 2026
+
+                        </small>
+
+                    </div>
+
+
+                    <span class="badge text-bg-warning">
+
+                        25 days left
+
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="d-flex justify-content-between
+                            align-items-center">
+
+                    <div>
+
+                        <div class="fw-semibold">
+
+                            Samsung Refrigerator
+
+                        </div>
+
+                        <small class="text-secondary">
+
+                            Warranty ends on 12 Nov 2027
+
+                        </small>
+
+                    </div>
+
+
+                    <span class="badge text-bg-success">
+
+                        Active
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- Quick Actions -->
+
+    <div class="col-lg-6">
+
+
+        <div class="card border-0 shadow-sm h-100">
+
+
+            <div class="card-body">
+
+
+                <h5 class="fw-bold dashboard-title mb-3">
+
+                    Quick Actions
+
+                </h5>
+
+
+
+                <div class="d-grid gap-2">
+
+
+                    <a href="#"
+                       class="btn btn-outline-primary text-start">
+
+                        <i class="bi bi-cloud-upload me-2"></i>
+
+                        Upload a New Bill
+
+                    </a>
+
+
+
+                    <a href="#"
+                       class="btn btn-outline-primary text-start">
+
+                        <i class="bi bi-search me-2"></i>
+
+                        Search My Bills
+
+                    </a>
+
+
+
+                    <a href="#"
+                       class="btn btn-outline-primary text-start">
+
+                        <i class="bi bi-shield-check me-2"></i>
+
+                        View Warranty Tracker
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
 {% endblock %}

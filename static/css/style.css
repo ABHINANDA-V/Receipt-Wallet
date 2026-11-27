@@ -10,14 +10,14 @@
     --primary-color:rgb(7, 7, 83);
     --secondary-color:rgb(179, 91, 19);
     --tertiary-color:rgb(119, 119, 170);
-    --box-shadow: 0 4px 16px rgba(59, 51, 108, 0.5);
+    --box-shadow: 0 4px 16px rgba(47, 36, 118, 0.5);
     
 }
-
 /* Navbar and Footer */
 .navbar
 {
-    box-shadow: 0 4px 16px rgba(49, 32, 103, 0.5);
+    box-shadow:var(--box-shadow);
+    
 }
 
 /* Navbar logo */
@@ -48,7 +48,7 @@
 .navbar .nav-link
 {
     color : var(--primary-color);
-    margin: 0 8px;
+    margin: 0 15px;
     transition:0.3s;
     font-weight: bold;
     font-size:18px;
@@ -66,6 +66,12 @@
 {
     border-radius: 8px;
     font-weight: 500;
+    margin-left: 10px;
+}
+ .btn:hover
+{
+    background-color: var(--secondary-color);
+    border: none;
 }
 
 /* Footer */
@@ -107,8 +113,8 @@ footer
 {
     color:var(--secondary-color);
     font-style: italic;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.4;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Description */
@@ -116,6 +122,22 @@ footer
 {
     color:var(--tertiary-color);
     line-height: 1.7;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.hero-button
+{
+    border-radius: 15px;
+}
+
+.hero-button:hover
+{
+    background-color: var(--secondary-color);
+    border: none;
+
+}
+.hero-image
+{
+    width: 60%;
 }
 
 
@@ -138,6 +160,24 @@ footer
 
 
 /* =============================LOGIN AND REGISTRATION PAGE========================================== */
+.login-auth-page
+{
+    background-image: url('/static/images/loginBackground.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.register-auth-page
+{
+    background-image: url('/static/images/registerBackground.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.auth-header
+{
+    box-shadow: var(--box-shadow);
+}
 .auth-picture
 {
     width: 100%;
@@ -149,4 +189,80 @@ footer
     border:none;
     box-shadow: var(--box-shadow);
     border-radius: 10px;
+}
+
+.auth-title
+{
+    color: var(--primary-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.auth-subtitle
+{
+    color: var(--secondary-color);
+    font-style: italic;
+    font-size: 20px;
+}
+.auth-icon
+{
+    font-size: 25px;
+}
+.input-group
+{
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+
+}
+
+/* ==============================================
+           DASHBOARD LAYOUT
+============================================== */
+.dashboard-wrapper
+{
+    /* background-color: #102c60; */
+    min-height: calc(100vh - 65px);
+}
+
+.sidebar
+{
+    background-color: var(--primary-color);
+}
+.dashboard-title
+{
+    color: #7d8797;
+}
+
+.dashboard-sidebar
+{
+    background-color: aqua;
+    min-height: calc(100vh - 65px);
+    border-right: 1px solid blue;
+}
+
+/* Sidebar Links */
+.dashboard-sidebar .nav-link
+{
+    color:var(--tertiary-color);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 12px 15px;
+}
+.dashboard-sidebar .nav-link:hover
+{
+    background-color: var(--secondary-color);
+    color:white;
+}
+
+
+
+
+
+/* =================MEDIA QUERY========= */
+/* login page */
+@media(max-width:767.98px){
+    .register-auth-page .login-auth-page
+    {
+        background-image: none!important;
+        background-color: #7d8797;
+    }
 }

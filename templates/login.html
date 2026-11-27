@@ -1,13 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+Login - Receipt Wallet
+{% endblock %}
+
+
+<!-- ====================Auth Header===================================== -->
+ {% block navbar %}
+ <header class="auth-header">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between py-3">
+            <h5>
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="/">
+              <span class="wallet-icon"><i class="bi bi-wallet-fill"></i></span>
+              <span class="receipt">Receipt</span> <span class="wallet">Wallet</span>
+            </a>
+          </h5>
+
+          <div class="small">
+            <span class="text-dark">Don't have an account?</span>
+            <a href="{% url 'register' %}" class="text-primary fw-semibold text-decoration-none ms-1">Register</a>
+          </div>
+
+
+        </div>
+
+    </div>
+
+ </header>
+ {% endblock %}
+
 {% block content %}
-<section class="auth-page">
-    <div class="container-fluid">
+<section class="login-auth-page">
+    <div class="container">
         <div class="row g-3">
-            <div class="col-md-6">
-                <img src="{% static 'images/login picture.png' %}" class="auth-picture" alt="loginPicture">
-            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                </div>
 
 
             <div class="col-md-6 py-5">
@@ -15,21 +44,21 @@
 
                     <div class="text-center mb-4">
                     <h2 class="fw-bold auth-title">Login to Your Account</h2>
-                    <p class="text-secondary">Enter your Credentials</p>
+                    <p class="auth-subtitle">Enter your Credentials</p>
                     </div>
 
                     <!-- LOGIN FORM -->
                     <form action="">
                         
                         <!-- Email -->
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text auth-icon" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
                             <input type="email" class="form-control py-3" placeholder="Email Address" required>
                         </div>
 
                         <!-- Password -->
                         <div class="input-group mb-4">
-                            <span class="input-group-text" id="addon-wrapping"> <i class="bi bi-lock"></i>
+                            <span class="input-group-text auth-icon" id="addon-wrapping"> <i class="bi bi-lock"></i>
                             </span>
                             <input type="password" class="form-control py-3" placeholder="Password" required>
                         </div>
@@ -54,3 +83,4 @@
 
 </section>
 {% endblock %}
+
