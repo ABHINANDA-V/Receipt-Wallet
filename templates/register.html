@@ -35,7 +35,7 @@ Register - Receipt Wallet
     <div class="container">
         <div class="row g-3">
             <div class="col-md-6 d-none d-md-block">
-                
+
             </div>
 
 
@@ -48,42 +48,107 @@ Register - Receipt Wallet
                     </div>
 
                     <!-- Register FORM -->
-                    <form action="">
+                    <form method="post">
+                        {% csrf_token %}
+
+
                         <!-- Full Name -->
-                        <div class="input-group mb-3">
-                            <span class="input-group-text auth-icon" id="addon-wrapping"><i class="bi bi-person"></i></span>
-                            <input type="text" class="form-control py-3" id="full_name"
-                                placeholder="Enter your Full Name" required>
+
+                        <div class="mb-3">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text auth-icon">
+                                    <i class="bi bi-person"></i>
+                                </span>
+
+                                {{ form.first_name }}
+
+                            </div>
+
+                            {{ form.first_name.errors }}
+
                         </div>
+
 
 
                         <!-- Email -->
-                        <div class="input-group mb-3">
-                            <span class="input-group-text auth-icon" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
-                            <input type="email" class="form-control py-3" id="email"
-                                placeholder="Enter your Email Address" required>
+
+                        <!-- Email -->
+
+                        <div class="mb-3">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text auth-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+
+                                {{ form.username }}
+
+                            </div>
+
+                            {{ form.username.errors }}
+
                         </div>
+
+
 
                         <!-- Password -->
-                        <div class="input-group mb-4">
-                            <span class="input-group-text auth-icon" id="addon-wrapping"> <i class="bi bi-lock"></i>
-                            </span>
-                            <input type="password" class="form-control py-3" id="password"
-                                placeholder="Create a Password" required>
+
+                        <!-- Password -->
+
+                        <div class="mb-3">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text auth-icon">
+                                    <i class="bi bi-lock"></i>
+                                </span>
+
+                                {{ form.password1 }}
+
+                            </div>
+
+                            {{ form.password1.errors }}
+
                         </div>
+
 
                         <!--Confirm  Password -->
-                        <div class="input-group mb-4">
-                            <span class="input-group-text auth-icon" id="addon-wrapping"> <i class="bi bi-shield-lock"></i>
-                            </span>
-                            <input type="password" class="form-control py-3" id="confirm_password"
-                                placeholder="Confirm your Password" required>
+
+                        <!-- Confirm Password -->
+
+                        <div class="mb-4">
+
+                            <div class="input-group">
+
+                                <span class="input-group-text auth-icon">
+                                    <i class="bi bi-shield-lock"></i>
+                                </span>
+
+                                {{ form.password2 }}
+
+                            </div>
+
+                            {{ form.password2.errors }}
+
                         </div>
 
 
+                        <!-- General Form Errors -->
 
-                        <div class="input-group mb-3">
-                            <button class="btn btn-primary btn-lg w-100">Register</button>
+                        {{ form.non_field_errors }}
+
+
+                        <div class="d-grid mb-3">
+
+                            <button type="submit" class="btn btn-primary btn-lg">
+
+                                Register
+
+                            </button>
+
                         </div>
 
 
